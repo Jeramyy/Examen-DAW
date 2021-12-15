@@ -1,0 +1,210 @@
+/**********************ESTILO******************/
+@font-face {
+    font-family: 'titulo';
+    src: url('../fonts/LazenbyCompLiquid.ttf');
+  }
+  @font-face {
+    font-family: 'texto';
+    src: url('../fonts/OpenSans-Regular.ttf');
+  }
+
+
+
+html {scroll-behavior: smooth;}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: texto;
+  background-color: black;
+}
+#container {width: 60%;
+  margin: auto;
+  color: #ffffff;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/*******************NAV****************/
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(63, 63, 63);
+    font-family: titulo;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #00e1ff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(218, 165, 32);
+    color: black;
+  }
+  .topnav .icon {
+    display: none;
+  }
+  @media screen and (max-width: 1000px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right; 
+    display: block; /*para tratarlo como un bloqur*/
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/*****************HERO*****************/
+#hero {background-image: url("../images/hero.jpg");
+    background-size: cover; /*estira o encoge la imagen para que ocupe el bloque entero */
+    background-position: center;
+    color: #EBF7E3;
+    height: 90vh;/* 100vh seria el alto del dispositivo movil, tablet o pc */
+    position: relative;
+border-bottom: solid 2px yellow;}
+  #hero h1 {font-size: 3em;
+    font-family: titulo;
+    color: rgb(0, 225, 255);
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    bottom: 25px;
+    margin: 0px;
+    position: absolute;
+    left: 5px;
+    border: solid rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow:-5px -5px 25px rgb(255, 251, 0);
+
+  }
+  /****************INTRODUCCION****************/
+  #introduccion h1{border: solid rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 40%; /*60% del contenedor superior , #uno */
+    text-align: center;
+    font-size: 2.5em;/*todo lo relativo a tamaño de letra mejor con em, 1em=tamaño por defecto*/
+    padding: 10px;
+    margin:20px auto;
+    box-shadow:
+                -5px -5px 25px rgb(255, 251, 0);
+            font-family: titulo;}
+
+  #introduccion {font-family:texto;
+    color:rgb(0, 225, 255);      
+    padding:10%;
+    text-align:justify;
+    background-color: black;
+}
+  #introduccion p{font-size: 1.5em;}
+  #introduccion p:first-letter {font-size:1.8em;  /*** selector nuevo :first-letter */
+    color:#ffd900;
+    }
+    #qc{width:40%;  /* como es grande, que ocupe solo el 50% del espacio disponible */
+        float:right; /* OJO, NUEVO: para que la imagen quede rodeada por texto */
+        margin:20px}
+/************************PROTOTYPES***************/
+#titulo h1{border: solid rgb(0, 0, 0);
+    color: cyan;
+    border-radius: 20px;
+    width: 40%; /*60% del contenedor superior , #uno */
+    text-align: center;
+    font-size: 2.5em;/*todo lo relativo a tamaño de letra mejor con em, 1em=tamaño por defecto*/
+    padding: 10px;
+    margin:20px auto;
+    box-shadow:-5px -5px 25px rgb(255, 251, 0);
+            font-family: titulo;
+}
+
+#prototypes{
+  
+    background-color: #000000;
+    display: flex; /*se despliega en una fila , todo juntito , por defecto su direccion es row*/
+      flex-direction: row;
+      flex-wrap: wrap;/*cuando sean demasiados elementos en vez de todo en una linea se ponen por debajo el resto*/
+      justify-content: center;/*La propiedad CSS justify-content define cómo
+       el navegador distribuye el espacio entre y alrededor de los items flex(las fotos), a lo largo del eje principal de su contenedor.(basicamente
+       el espacio entre medio)*/
+  }
+    #prototypes h1 {font-family: titulo;
+                  text-align:center;
+                  font-size: 2em;
+                  color:rgb(229, 255, 0);
+                  padding:30px 0;
+                  padding-right: 38px;
+              }
+    #prototypes h2 {color: rgb(229, 255, 0);
+                }
+    #prototypes h3 {color: rgb(0, 0, 0);
+    background-color: cyan;
+    text-align: center;}
+    .cuarto {width:20%;
+              margin:2%;
+              padding:2%;
+              float:left;
+              box-sizing:border-box;/*** en el width entra padding y border */
+              border:2px solid rgb(218, 165, 32);
+              box-shadow:-5px -5px 25px rgb(255, 251, 0);
+               
+            }
+    
+    .cuarto img {width:99%;
+                  }
+        
+    .cuarto h2 {font-family: runas;
+                color:white;
+                text-align:center;}
+
+
+/**********************FOOTER******************/
+footer{background-color: rgb(196, 4, 4);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid rgb(197, 252, 0);
+    border-radius: 20px;
+    width: 70%; /*60% del contenedor superior , #uno */
+    text-align: center;
+    padding: 10px;
+    margin:20px auto;
+    background-color: black;
+    }
+    footer p {color: cadetblue;}
+
+
+    @media only screen and (max-width: 1000px){
+        #container {margin-top: 0;}
+        .cuarto{width: 46%;}
+    }
+    
+    @media only screen and (max-width: 780px){
+        #container { margin-top: 0 ;
+            width: 80%;}
+        
+    }
+    
+    @media only screen and (max-width: 600px){
+        #container {width: 100%;}
+        .cuarto {width: 100%;}
+       
+    }
